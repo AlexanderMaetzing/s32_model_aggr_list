@@ -1,6 +1,17 @@
-<mvc:View controllerName="ama.s32.s32modelaggrlist.controller.Main"
+<mvc:View xmlns:layout="sap.ui.layout" controllerName="ama.s32.s32modelaggrlist.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    </Page>
+        <layout:HorizontalLayout id="hor01">
+            <Image id="img01" src="/data/Biltmore.jpg" height="350px"/>
+            <Image id="img02" src="/data/Oscar.jpg" height="350px"/>
+            <Image id="img03" src="/data/ColbertTemple.jpg" height="350px"/>
+        </layout:HorizontalLayout>
+		<List items="{/oscar}" id="list0">
+			<items>
+				<StandardListItem title="{oscYear}"  id="item0" type="Active"
+								description="{oscBestFilm} ({oscNumber})"/>
+			</items>
+		</List>
+	</Page>
 </mvc:View>
